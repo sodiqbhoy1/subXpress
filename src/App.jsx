@@ -5,6 +5,7 @@ import Signin from './components/Signin'
 import Signup from './components/Signup'
 import Contact from './components/Contact'
 import Dashboard from './components/Dashboard'
+import ForgotPassword from './components/ForgotPassword'
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true); // Simulate a logged-in user
@@ -15,6 +16,7 @@ const App = () => {
 
 <Routes>
   <Route path='/' element={<Home/>} />
+  <Route path='/forgot-password' element={<ForgotPassword/>} />
   <Route path="/dashboard/*" element={isLoggedIn ? <Dashboard /> : <Signin />} />
   <Route path='/contact' element={<Contact/>} />
   <Route path='/signin' element={<Signin/>} />

@@ -14,65 +14,68 @@ const Signup = () => {
 
   return (
     <>
-    <Navbar/>
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h2 className="text-3xl font-bold text-center mb-4">Sign Up</h2>
-        <Formik
-          initialValues={{ email: '', password: '', confirmPassword: '' }}
-          validationSchema={validationSchema}
-          onSubmit={(values) => {
+      <Navbar />
+      <div className="min-h-screen flex items-center justify-center bg-[#f4d58d]">
+        <div className="bg-white p-8 rounded-lg shadow-lg w-96">
+          <h2 className="text-3xl font-bold text-center mb-4 text-[#001427]">Sign Up</h2>
+          <Formik
+            initialValues={{ email: '', password: '', confirmPassword: '' }}
+            validationSchema={validationSchema}
+            onSubmit={(values) => {
               console.log(values);
             }}
-            >
-          {() => (
+          >
+            {() => (
               <Form>
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-                <Field
-                  type="email"
-                  name="email"
-                  className="mt-1 p-2 border border-gray-300 rounded w-full"
-                  placeholder="Enter your email"
-                />
-                <ErrorMessage name="email" component="div" className="text-red-500 text-xs" />
-              </div>
-
-              <div className="mb-4">
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
-                <Field
-                  type="password"
-                  name="password"
-                  className="mt-1 p-2 border border-gray-300 rounded w-full"
-                  placeholder="Enter your password"
-                />
-                <ErrorMessage name="password" component="div" className="text-red-500 text-xs" />
-              </div>
-
-              <div className="mb-4">
-                <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">Confirm Password</label>
-                <Field
-                  type="password"
-                  name="confirmPassword"
-                  className="mt-1 p-2 border border-gray-300 rounded w-full"
-                  placeholder="Confirm your password"
+                <div className="mb-4">
+                  <label htmlFor="email" className="block text-sm font-medium text-[#001427]">Email</label>
+                  <Field
+                    type="email"
+                    name="email"
+                    className="mt-1 p-2 border border-[#708d81] rounded w-full"
+                    placeholder="Enter your email"
                   />
-                <ErrorMessage name="confirmPassword" component="div" className="text-red-500 text-xs" />
-              </div>
+                  <ErrorMessage name="email" component="div" className="text-red-500 text-xs" />
+                </div>
 
-              <div className="flex justify-between items-center mb-4">
-                <a href="/sign-in" className="text-blue-600 text-sm">Already have an account? Sign In</a>
-              </div>
+                <div className="mb-4">
+                  <label htmlFor="password" className="block text-sm font-medium text-[#001427]">Password</label>
+                  <Field
+                    type="password"
+                    name="password"
+                    className="mt-1 p-2 border border-[#708d81] rounded w-full"
+                    placeholder="Enter your password"
+                  />
+                  <ErrorMessage name="password" component="div" className="text-red-500 text-xs" />
+                </div>
 
-              <button type="submit" className="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                Sign Up
-              </button>
-            </Form>
-          )}
-        </Formik>
+                <div className="mb-4">
+                  <label htmlFor="confirmPassword" className="block text-sm font-medium text-[#001427]">Confirm Password</label>
+                  <Field
+                    type="password"
+                    name="confirmPassword"
+                    className="mt-1 p-2 border border-[#708d81] rounded w-full"
+                    placeholder="Confirm your password"
+                  />
+                  <ErrorMessage name="confirmPassword" component="div" className="text-red-500 text-xs" />
+                </div>
+
+                <div className="flex justify-between items-center mb-4">
+                  <a href="/signin" className="text-[#001427] text-sm hover:text-[#bf0603]">Already have an account? Sign In</a>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-2 bg-[#001427] text-white rounded hover:bg-[#708d81] transition duration-300"
+                >
+                  Sign Up
+                </button>
+              </Form>
+            )}
+          </Formik>
+        </div>
       </div>
-    </div>
-                  </>
+    </>
   );
 };
 

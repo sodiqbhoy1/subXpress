@@ -61,7 +61,7 @@ const Settings = () => {
             name="name"
             value={userInfo.name}
             onChange={handleUserInfoChange}
-            className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
           />
         </div>
 
@@ -73,7 +73,7 @@ const Settings = () => {
             name="email"
             value={userInfo.email}
             onChange={handleUserInfoChange}
-            className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
           />
         </div>
       </div>
@@ -89,7 +89,7 @@ const Settings = () => {
             name="currentPassword"
             value={password.currentPassword}
             onChange={handlePasswordChange}
-            className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
           />
         </div>
 
@@ -101,7 +101,7 @@ const Settings = () => {
             name="newPassword"
             value={password.newPassword}
             onChange={handlePasswordChange}
-            className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
           />
         </div>
 
@@ -113,7 +113,7 @@ const Settings = () => {
             name="confirmPassword"
             value={password.confirmPassword}
             onChange={handlePasswordChange}
-            className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
           />
         </div>
       </div>
@@ -173,7 +173,7 @@ const Settings = () => {
       {/* Save Button */}
       <div className="mt-8 text-center">
         <button
-          className="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
           onClick={handleSaveSettings}
         >
           Save Settings
