@@ -22,7 +22,7 @@ const Dashboard = () => {
       <div
         className={`${
           collapsed ? "w-20" : "w-64"
-        } bg-[#001427] text-white h-full p-6 transition-all duration-300`}
+        } bg-[#001427] text-white h-full p-6 transition-all duration-300 fixed md:relative z-10 md:z-auto`}
       >
         {/* Sidebar Toggle Button */}
         <button
@@ -94,17 +94,21 @@ const Dashboard = () => {
         </ul>
       </div>
 
-{/* Content Area */}
-<div className="flex-1 p-6 bg-[#f4d58d] min-h-screen overflow-y-auto">
-  <div className="container mx-auto">
-    <Routes>
-      <Route path="/" element={<Navigate to="/dashboard/profile" />} /> {/* Redirect to profile by default */}
-      <Route path="profile" element={<Profile />} />
-      <Route path="settings" element={<Settings />} />
-      <Route path="messages" element={<Messages />} />
-    </Routes>
-  </div>
-</div>
+      {/* Content Area */}
+      <div
+        className={`flex-1 p-6 bg-[#f4d58d] min-h-screen overflow-y-auto ${
+          collapsed ? "ml-20" : "ml-64"
+        } transition-all duration-300`}
+      >
+        <div className="container mx-auto">
+          <Routes>
+            <Route path="/" element={<Navigate to="/dashboard/profile" />} /> {/* Redirect to profile by default */}
+            <Route path="profile" element={<Profile />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="messages" element={<Messages />} />
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 };
